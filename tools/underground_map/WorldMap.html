@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="WorldMap.js"></script>
+</head>
+
+<body class="bg-dark">
+
+  <div class="jumbotron bg-dark text-light jumbotron-fluid m-0">
+    <div class="container">
+      <h1>
+        Visualization of Giha World
+      </h1>
+      <p>
+        Graphical representation of the world of Giha. 
+        Village nodes are house icons.
+      </p> 
+    </div>
+  </div>
+
+  <div class="container-fluid bg-secondary p-0">
+    <div class="row m-0">
+      <svg id="graph" height="512px">
+      </svg>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="row center ml-3 mt-5">
+      <div class="btn-toolbar">
+        <button type="button" class="btn btn-secondary mr-2" onclick="generateGraph()">Generate</button>
+        <button type="button" class="btn btn-secondary mr-2">Reset</button>
+        <button type="button" class="btn btn-secondary mr-2">Export</button>
+      </div> 
+    </div>
+  </div>
+</body>
+</html>

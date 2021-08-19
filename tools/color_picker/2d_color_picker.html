@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.js
+  "></script>
+  <script src="pixel_projection.js"></script>
+</head>
+
+<body class="bg-dark text-light" onload="init()">
+
+  <div class="container">
+    <div class="row">
+      <h1>RGB Lerp Space Calculator</h1>
+    </div>
+    <div class="row">
+      <p>Provide three RGB values for a visualization of the 2D plane occupied by those points.</p>
+    </div>
+
+    <div class="row p-3">
+      <div class="col-8">
+        <canvas id="canvas" class="bg-secondary" height="512px" width="512px"></canvas>
+      </div>
+      <div class="col-4">
+        test
+      </div>
+    </div>
+
+    <div class="row">
+      <h3>Motivation</h3>
+    </div>
+    <div class="row">
+      <p>
+        I first created this with the goal of having a more systematic way of defining color palettes. It was created to try and choose better asset colors for a subterrenean-themed game I was working on. 
+        I also took inspiration from <a href="./assets/flesh_cloud.jpg">this</a> tumblr post about a "flesh cloud" that artists could use to select skin tones more randomly; if you use the lerp tool on three distinct skin tones from the "flesh cloud", you can find the full flesh cloud as a subset of the returned 2D space.</p>
+    </div>
+    <div class="row">
+      <h3>Implementation</h3>
+    </div>
+    <div class="row">
+      <p>Lerp space calculator takes three colors and calculates the plane that linearly interpolates those points. It creates a 2D basis for this plane, and evaluates the resulting RGB value of each screen pixel, using pixel coordinates as coordinates in our new 2D basis.</p>
+    </div>
+    <div class="row">
+      <h3>TODO:</h3>
+    </div>
+    <div class="row">
+      <p>
+        1. Add UI<br>
+        2. Add visual indicators for selected colors<br>
+        3. Add my favorite color palettes<br>
+        4. Add interpolation through other spaces (HSV, HSL, HSLuv)<br>
+    </div>
+  </div>
+</body>
+</html>
